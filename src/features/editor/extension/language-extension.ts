@@ -7,6 +7,7 @@ import {markdown } from "@codemirror/lang-markdown";
 import { python } from "@codemirror/lang-python";
 import { yaml } from "@codemirror/lang-yaml";
 import { xml } from "@codemirror/lang-xml";
+import {css} from  "@codemirror/lang-css";
 
 export const getLanguageExtension = (fileName:string): Extension =>{
     const file = fileName.split(".")?.pop()?.toLowerCase();
@@ -34,6 +35,8 @@ export const getLanguageExtension = (fileName:string): Extension =>{
             return yaml()
         case 'xml':
             return xml()
+        case 'css':
+            return css()
         default:
             return []
     }

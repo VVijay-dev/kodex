@@ -39,9 +39,9 @@ export const FileBreadcrumbs = ({projectId}:{projectId:Id<'projects'>})=>{
                         <FileIcon fileName={item.name}  className="size-4" autoAssign/>
                         {item.name}
                        
-                        </BreadcrumbPage>) : (<BreadcrumbItem>
+                        </BreadcrumbPage>) : (
                         <BreadcrumbLink href="#">{item.name}</BreadcrumbLink>
-                        </BreadcrumbItem>)}
+                        )}
                         {!isLast && <BreadcrumbSeparator/>}
                         
                         

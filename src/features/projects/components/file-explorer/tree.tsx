@@ -94,10 +94,11 @@ export const Tree = ({item,projectId,level= 0}:{
          onClick={()=>openFile(item._id,{pinned:false})}
           onDoubleClick={()=>openFile(item._id,{pinned:true})}
            onRename={()=> setIsRenaming(true)}
-            onDelete={()=>{
+            onDelete={async()=>{
+               await  deleteFile({id:item._id})
                 closeTab(item._id)
-                deleteFile({id:item._id})} 
-            }
+                
+            }}
          level={level}
          >
             
